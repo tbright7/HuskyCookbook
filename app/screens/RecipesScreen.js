@@ -1,17 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button, Text, View } from 'react-native';
+import recipes from "../Recipes.js"
+import RecipeInfoScreen from "./RecipeInfoScreen.js"
 
 function RecipesScreen(props) {
+    const [recipe, setRecipe] = useState(null)
+    const showRecipe = (item) => {
+        setRecipe(item)
+    }
     return (
         <View>
-            <Button 
-            title='Home' 
-            onPress={() => {
-            props.showRecipes();
+            <Button title="Return Home" onPress={() => {
+                props.showRecipes();
             }}/>
-            <Text>
-            Hi Ivory, here's where I'm going to show a list of recipes users can click on
+            {recipe === null && 
+            recipes.map((recipe) => (
+            <Text key={recipe.id}>
+            <Button 
+            title={recipe.name}
+            onPress ={() => {
+                showRecipe(recipe)
+            }}
+            />
             </Text>
+        ))}
+            {recipe !=null &&
+            <RecipeInfoScreen recipe ={recipe}/>
+            }
         </View>
     );
 }
