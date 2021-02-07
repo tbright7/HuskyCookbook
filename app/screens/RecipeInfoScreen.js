@@ -11,25 +11,25 @@ function RecipeInfoScreen(props) {
             {showingRecipe === false && 
             <View>
             <Text>
-                {props.recipe.author}
+                {props.recipeToShow.author}
             </Text>
             <Text>
-                {props.recipe.authorTitle}
+                {props.recipeToShow.authorTitle}
             </Text>
             <Text>   
-                {props.recipe.story}
+                {props.recipeToShow.story}
             </Text>
             <Text>   
-                Prep time: {props.recipe.prepTime}
+                Prep time: {props.recipeToShow.prepTime}
             </Text>
             <Text>   
-                Cook time: {props.recipe.cookTime}
+                Cook time: {props.recipeToShow.cookTime}
             </Text>
             <Text>   
-                Serving size: {props.recipe.servingSize}
+                Serving size: {props.recipeToShow.servingSize}
             </Text>
             <Text>   
-                Number of servings: {props.recipe.yields}
+                Number of servings: {props.recipeToShow.yields}
             </Text>
             <Button 
             title="See the recipe"
@@ -43,12 +43,12 @@ function RecipeInfoScreen(props) {
                 <SafeAreaView>
 
                 <Text>
-                {props.recipe.ingredients.map((ingredient) => (
+                {props.recipeToShow.ingredients.map((ingredient) => (
                     <Text key={ingredient} >{ingredient}</Text>
                 ))}
                 </Text>
                 <Text>
-                {props.recipe.directions.map((direction) => (
+                {props.recipeToShow.directions.map((direction) => (
                     <Text key={direction} >{direction}</Text>
                 ))}
                 <Button 
