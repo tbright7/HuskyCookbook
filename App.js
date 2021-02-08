@@ -1,64 +1,150 @@
-import { StatusBar } from 'expo-status-bar';
-import React, { useState } from 'react';
-import { Button, StyleSheet, Text, View } from 'react-native';
-import RecipesScreen from './app/screens/RecipesScreen.js'
-import SavedRecipesScreen from './app/screens/SavedRecipesScreen.js'
-import recipes from "./app/Recipes.js"
+import { StatusBar } from "expo-status-bar";
+import React, { useEffect, useState } from "react";
+import {
+  Button,
+  TouchableOpacity,
+  SafeAreaView,
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  ImageBackground,
+} from "react-native";
+import RecipesScreen from "./app/screens/RecipesScreen.js";
+import SavedRecipesScreen from "./app/screens/SavedRecipesScreen.js";
+import recipes from "./app/Recipes.js";
 export default function App() {
-  const [viewRecipes, setViewRecipes] = useState(false)
-  const [viewSavedRecipes, setViewSavedRecipes] = useState(false)
-  const [recipeList, setRecipeList] = useState(recipes)
-  const showRecipes = () =>{
-    setViewRecipes(!viewRecipes)
-  }
-  const showSavedRecipes = () =>{
-    setViewSavedRecipes(!viewSavedRecipes)
-  }
-  const filterRecipes = (item) =>{
-    setRecipeList(recipes.filter((recipe) =>recipe.category === item))
-  }
-  const alergenFilter = (alergen) =>{
-    setRecipeList(recipeList.filter((recipe) => recipe[alergen] === false))
-    console.log(recipeList)
-  }
+  const [viewRecipes, setViewRecipes] = useState(false);
+  const [viewSavedRecipes, setViewSavedRecipes] = useState(false);
+  const [recipeList, setRecipeList] = useState(recipes);
+  const showRecipes = () => {
+    setViewRecipes(!viewRecipes);
+  };
+  const showSavedRecipes = () => {
+    setViewSavedRecipes(!viewSavedRecipes);
+  };
+  const filterRecipes = (item) => {
+    if (item) {
+      setRecipeList(recipes.filter((recipe) => recipe.category === item));
+    } else {
+      setRecipeList(recipes);
+    }
+  };
+  const alergenFilter = (alergen) => {
+    setRecipeList(recipeList.filter((recipe) => recipe[alergen] === false));
+    console.log(recipeList);
+  };
   return (
     <View style={styles.container}>
-      {viewRecipes === false && viewSavedRecipes === false &&
-      <View>
-      <Button title ="appetizers, sides, & snacks" onPress={() =>{
-        filterRecipes("appetizers, sides, & snacks");
-        showRecipes()
-      }}/>
-     
-      <Button title ="hearty mains" onPress={() =>{
-        filterRecipes("hearty mains");
-        showRecipes()
-      }}/>
-     
-      <Button title ="soups & stews" onPress={() =>{
-        filterRecipes("soups & stews");
-        showRecipes()
-      }}/>
-      <Button title ="sweet & savory baked goods" onPress={() =>{
-        filterRecipes("sweet & savory baked goods");
-        showRecipes()
-      }}/>
-      <Button title="View all recipes" onPress={() => {
-    showRecipes();
-  }}/>
-    </View>
-    }
-      {viewRecipes === true && 
-        <RecipesScreen alergenFilter = {alergenFilter} recipes = {recipeList} showRecipes={showRecipes}/>
-      }
-      {viewRecipes === false && viewSavedRecipes === false &&
-      <Button title="Saved Recipes" onPress={() => {
-        showSavedRecipes();
-      }}/>      
-      }
-      <StatusBar style="auto" />
-      {viewSavedRecipes === true && viewSavedRecipes === true &&
-      <SavedRecipesScreen showSavedRecipes={showSavedRecipes}/>}
+      <SafeAreaView style={styles.container}>
+        {viewRecipes === false && viewSavedRecipes === false && (
+          <View>
+            <Image
+              style={styles.image}
+              source={require("./app/assets/cookbook.png")}
+            />
+          </View>
+        )}
+        {viewRecipes === false && viewSavedRecipes === false && (
+          <View style={styles.container}>
+            <View>
+              <TouchableOpacity
+                style={styles.buttonGroup}
+                title="appetizers, sides, & snacks"
+                onPress={() => {
+                  filterRecipes("appetizers, sides, & snacks");
+                  showRecipes();
+                }}
+              >
+                <Image
+                  style={styles.cake}
+                  source={require("./app/assets/salad.png")}
+                />
+              </TouchableOpacity>
+
+              <TouchableOpacity
+                style={styles.buttonGroup}
+                title="hearty mains"
+                onPress={() => {
+                  filterRecipes("hearty mains");
+                  showRecipes();
+                }}
+              >
+                <Image
+                  style={styles.cake}
+                  source={require("./app/assets/meal.png")}
+                />
+              </TouchableOpacity>
+
+              <TouchableOpacity
+                style={styles.buttonGroup}
+                title="View all recipes"
+                onPress={() => {
+                  filterRecipes();
+                  showRecipes();
+                }}
+              >
+                <Image
+                  style={styles.cake}
+                  source={require("./app/assets/Menu.png")}
+                />
+              </TouchableOpacity>
+            </View>
+            <View>
+              <TouchableOpacity
+                style={styles.buttonGroup}
+                title="sweet & savory baked goods"
+                onPress={() => {
+                  filterRecipes("sweet & savory baked goods");
+                  showRecipes();
+                }}
+              >
+                <Image
+                  style={styles.cake}
+                  source={require("./app/assets/cake.png")}
+                />
+              </TouchableOpacity>
+
+              <TouchableOpacity
+                style={styles.buttonGroup}
+                title="soups & stews"
+                onPress={() => {
+                  filterRecipes("soups & stews");
+                  showRecipes();
+                }}
+              >
+                <Image
+                  style={styles.cake}
+                  source={require("./app/assets/soup.png")}
+                />
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={styles.buttonGroup}
+                title="Saved Recipes"
+                onPress={() => {
+                  showSavedRecipes();
+                }}
+              >
+                <Image
+                  style={styles.cake}
+                  source={require("./app/assets/heart.png")}
+                />
+              </TouchableOpacity>
+            </View>
+          </View>
+        )}
+        {viewRecipes === true && (
+          <RecipesScreen
+            alergenFilter={alergenFilter}
+            recipes={recipeList}
+            showRecipes={showRecipes}
+          />
+        )}
+        <StatusBar style="auto" />
+        {viewSavedRecipes === true && viewSavedRecipes === true && (
+          <SavedRecipesScreen showSavedRecipes={showSavedRecipes} />
+        )}
+      </SafeAreaView>
     </View>
   );
 }
@@ -66,10 +152,46 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    flexDirection: "column",
+    flexWrap: "wrap",
+    backgroundColor: "white",
+    // alignItems: "center",
+    justifyContent: "center",
+    alignContent: "center",
+  },
+  buttonGroup: {
+    width: 150,
+    height: 150,
+    margin: 10,
+    justifyContent: "center",
+    alignItems: "center",
+    borderWidth: 5,
+    borderRadius: 20,
+    borderColor: "#b7a57a",
+    backgroundColor: "#4b2e83",
+  },
+  text: {
+    color: "white",
+  },
+  image: {
+    // flex: 1,
+    // resizeMode: "cover",
+    // justifyContent: "center",
+    // alignItems: "center",
+    // alignContent: "center",
+    left: "24%",
+    width: 175,
+    height: 175,
+    tintColor: "#4b2e83",
+  },
+  cake: {
+    // flex: 1,
+    // resizeMode: "cover",
+    // justifyContent: "center",
+    // alignItems: "center",
+    // alignContent: "center",
+    // left: "24%",
+    width: 125,
+    height: 125,
   },
 });
-
-
