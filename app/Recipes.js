@@ -118,7 +118,7 @@
         "soy" : false,
         "tree nuts" : false,
         "wheat" : true,
-        "dietaryRestrictions": "vegetarian",
+        "dietaryRestrictions": "Vegetarian",
         "source": "Self-made",
         "directions": [
             "01 The first step is to prepare the stuffing. Heat a wide, heavy bottom pan on medium heat and add oil. ",
@@ -162,7 +162,7 @@
         "soy" : false,
         "tree nuts" : false,
         "wheat" : true,
-        "dietaryRestrictions": "vegetarian",
+        "dietaryRestrictions": "Vegetarian",
         "source": "Mom",
         "directions": [
             "01 Gather the ingredients; prepare a blender. ",
@@ -233,7 +233,7 @@
         "soy" : false,
         "tree nuts" : false,
         "wheat" : false,
-        "dietaryRestrictions": "vegan",
+        "dietaryRestrictions": "Vegan",
         "source": "Mom",
         "directions": [
             "01 In a large skillet, heat oil over medium heat. Add onion to skillet and let soften for 1-2 minutes. ",
@@ -319,7 +319,7 @@
         "soy" : true,
         "tree nuts" : false,
         "wheat" : true,
-        "dietaryRestrictions": "vegetarian",
+        "dietaryRestrictions": "Vegetarian",
         "source": "Mom",
         "directions": [
             '01 Heat pan to medium, then add 1 tbsp oil to the pan, and fry the minced ginger until aromatic (about 30 seconds). ',
@@ -360,7 +360,7 @@
         "soy" : false,
         "tree nuts" : false,
         "wheat" : true,
-        "dietaryRestrictions": "vegetarian",
+        "dietaryRestrictions": "Vegetarian",
         "source": "Grandma",
         "directions": [
             '01 Mix all the dry ingredients together ',
@@ -402,7 +402,7 @@
         "soy" : true,
         "tree nuts" : false,
         "wheat" : true,
-        "dietaryRestrictions": "vegetarian",
+        "dietaryRestrictions": "Vegetarian",
         "source": "Mom",
         "directions": [
             '01 Cut and remove the bottom parts of the spinach stems until you are left with younger and crunchier stems. Then, cut spinach into 3-inch pieces and separate the leaf and thin stems from wider and crunchier parts. Wash well and drain. ',
@@ -477,7 +477,7 @@
         "soy" : false,
         "tree nuts" : false,
         "wheat" : false,
-        "dietaryRestrictions": "vegan",
+        "dietaryRestrictions": "Vegan",
         "source": "Self-made",
         "directions": [
             '01 Peel garlic cloves, and blend in a food processor. ',
@@ -516,7 +516,7 @@
         "soy" : false,
         "tree nuts" : false,
         "wheat" : true,
-        "dietaryRestrictions": "vegetarian",
+        "dietaryRestrictions": "Vegetarian",
         "source": "Friends",
         "directions": [
             "01 Mix potato flakes, flours, salt and sugar together in a large bowl. ",
@@ -559,7 +559,7 @@
         "soy" : false,
         "tree nuts" : false,
         "wheat" : false,
-        "dietaryRestrictions": "vegan",
+        "dietaryRestrictions": "Vegan",
         "source": "family",
         "directions": [
             "01 Cut all the vegetables into large chunks. Toss them into a giant salad bowl, then salt and pepper. The olive oil and balsamic vinegar are optional, as the homegrown vegetables are the stars of this bowl."
@@ -827,7 +827,7 @@
         "soy" : false,
         "tree nuts" : false,
         "wheat" : false,
-        "dietaryRestrictions": "vegetarian",
+        "dietaryRestrictions": "Vegetarian",
         "source": "Mom",
         "directions": [
             "01 Place potatoes, cauliflower, green peas, and beet in a medium-sized pan in water. Cover and simmer over medium-low heat for around 15 minutes, or until all vegetables are soft. Stir occasionally. ",
@@ -1387,7 +1387,7 @@
         "soy" : true,
         "tree nuts" : false,
         "wheat" : true,
-        "dietaryRestrictions": "vegan",
+        "dietaryRestrictions": "Vegan",
         "source": "Self-made",
         "directions": [
             "01 Place flour in a bowl, and mix in boiling water until dough forms. Let the mixture cool. Knead bread dough until smooth. Place in a bowl, cover with a towel, and let rest for 30 minutes. ",
@@ -1773,7 +1773,7 @@
         "servingSize": "2 cups",
         "yields": "4 servings",
         "ingredients": [
-            "3 oz imitation beef (soy protein, I like VeriSoy Vegan Beef Slice) ",
+            "3 oz imitation beef (soy protein, I like VeriSoy vegan Beef Slice) ",
             "2 large cloves garlic, sliced ",
             "1 tbsp fresh ginger, peeled and cut into thin sticks ",
             "1 medium onion, thinly sliced 3 stalks lemongrass, remove toughest outer layers first and cut into 2 inch lengths ",
@@ -1933,7 +1933,7 @@
         "soy" : false,
         "tree nuts" : false,
         "wheat" : false,
-        "dietaryRestrictions": "vegan",
+        "dietaryRestrictions": "Vegan",
         "source": "Family",
         "directions": [
             "01 Blanch tomatoes by placing tomatoes into a pot of boiling water for 2 minutes; then quickly place the tomatoes into a bowl of ice water. Peel the tomatoes. ",
@@ -2153,7 +2153,7 @@
         "soy" : false,
         "tree nuts" : false,
         "wheat" : false,
-        "dietaryRestrictions": "vegan",
+        "dietaryRestrictions": "Vegan",
         "source": "Self-made",
         "directions": [
             "01 Put all ingredients in a large cooking pot, stir, and simmer on low heat for half an hour."
@@ -2224,7 +2224,7 @@
         "soy" : false,
         "tree nuts" : false,
         "wheat" : true,
-        "dietaryRestrictions": "vegetarian",
+        "dietaryRestrictions": "Vegetarian",
         "source": "Grandma",
         "directions": [
             "01 In a medium bowl whisk flour, ginger, cinnamon, cloves, baking soda, and salt together and then set aside. ",
@@ -2265,7 +2265,7 @@
         "soy" : false,
         "tree nuts" : false,
         "wheat" : true,
-        "dietaryRestrictions": "vegetarian",
+        "dietaryRestrictions": "Vegetarian",
         "source": "Adapted recipe",
         "directions": [
             "01 Preheat oven to 350°F. ",
@@ -2304,7 +2304,7 @@
         "soy" : false,
         "tree nuts" : false,
         "wheat" : true,
-        "dietaryRestrictions": "vegan",
+        "dietaryRestrictions": "Vegan",
         "source": "Friend",
         "directions": [
             "RECIPE NOTES: This is a quick bread. You don't need to knead it, proof it, or any of that–just mix in a bowl with a spoon, plop it in a bread pan, and cook it. I highly recommend adding some spices (no more than a tablespoon total) to the batter to add a little flavor. A mix of rosemary, thyme, and oregano works great, or you can use herbs of provence if you're feeling fancy. This recipe adapts really well, so have fun with it! Add whatever spices you usually like to cook with and see if it works. You have the option to use a dark carbonated soda, such as coke or pepsi as a beer substitue; however, try to avoid sodas flavored with syrup, and instead use a cane-sugar soda like Mexican Coca-Cola, otherwise the texture will turn out funny. ",
@@ -2352,7 +2352,7 @@
         "soy" : false,
         "tree nuts" : true,
         "wheat" : true,
-        "dietaryRestrictions": "vegetarian",
+        "dietaryRestrictions": "Vegetarian",
         "source": "Adapted Recipe",
         "directions": [
             "BOTTOM LAYER: ",
@@ -2400,7 +2400,7 @@
         "soy" : false,
         "tree nuts" : false,
         "wheat" : true,
-        "dietaryRestrictions": "vegetarian",
+        "dietaryRestrictions": "Vegetarian",
         "source": "Adapted recipe",
         "directions": [
             "01 Preheat the oven to 300°F ",
@@ -2533,7 +2533,7 @@
         "soy" : false,
         "tree nuts" : false,
         "wheat" : true,
-        "dietaryRestrictions": "vegetarian",
+        "dietaryRestrictions": "Vegetarian",
         "source": "Adapted recipe",
         "directions": [
             "01 Heat butter and buttermilk in the microwave using a microwave safe glass bowl until the butter has melted. Heat in increments of 30 seconds as to not have a butter explosion in the microwave. Alternatively, heat butter and buttermilk in a saucepan on the stove until butter is melted ",
@@ -2589,7 +2589,7 @@
         "soy" : false,
         "tree nuts" : true,
         "wheat" : false,
-        "dietaryRestrictions": "vegetarian",
+        "dietaryRestrictions": "Vegetarian",
         "source": "Self-made",
         "directions": [
             "01 Cut bread into pieces about 1 inch square and toss them into a 9in x 12in casserole dish. ",
@@ -2628,7 +2628,7 @@
         "soy" : false,
         "tree nuts" : false,
         "wheat" : true,
-        "dietaryRestrictions": "vegetarian",
+        "dietaryRestrictions": "Vegetarian",
         "source": "Adapted recipe",
         "directions": [
             "01 First mix the yeast and honey with warm water in a 5-quart bowl, or in a lidded (not airtight) food container to start activation. Then, add in eggs, salt, and melted butter. ",

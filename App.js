@@ -23,16 +23,12 @@ export default function App() {
   const showSavedRecipes = () => {
     setViewSavedRecipes(!viewSavedRecipes);
   };
-  const filterRecipes = (item) => {
+  const filterRecipesByCategory = (item) => {
     if (item) {
       setRecipeList(recipes.filter((recipe) => recipe.category === item));
     } else {
       setRecipeList(recipes);
     }
-  };
-  const alergenFilter = (alergen) => {
-    setRecipeList(recipeList.filter((recipe) => recipe[alergen] === false));
-    console.log(recipeList);
   };
   return (
     <View style={styles.container}>
@@ -52,7 +48,7 @@ export default function App() {
                 style={styles.buttonGroup}
                 title="appetizers, sides, & snacks"
                 onPress={() => {
-                  filterRecipes("appetizers, sides, & snacks");
+                  filterRecipesByCategory("appetizers, sides, & snacks");
                   showRecipes();
                 }}
               >
@@ -66,7 +62,7 @@ export default function App() {
                 style={styles.buttonGroup}
                 title="hearty mains"
                 onPress={() => {
-                  filterRecipes("hearty mains");
+                  filterRecipesByCategory("hearty mains");
                   showRecipes();
                 }}
               >
@@ -80,7 +76,7 @@ export default function App() {
                 style={styles.buttonGroup}
                 title="View all recipes"
                 onPress={() => {
-                  filterRecipes();
+                  filterRecipesByCategory();
                   showRecipes();
                 }}
               >
@@ -95,7 +91,7 @@ export default function App() {
                 style={styles.buttonGroup}
                 title="sweet & savory baked goods"
                 onPress={() => {
-                  filterRecipes("sweet & savory baked goods");
+                  filterRecipesByCategory("sweet & savory baked goods");
                   showRecipes();
                 }}
               >
@@ -109,7 +105,7 @@ export default function App() {
                 style={styles.buttonGroup}
                 title="soups & stews"
                 onPress={() => {
-                  filterRecipes("soups & stews");
+                  filterRecipesByCategory("soups & stews");
                   showRecipes();
                 }}
               >
@@ -134,11 +130,7 @@ export default function App() {
           </View>
         )}
         {viewRecipes === true && (
-          <RecipesScreen
-            alergenFilter={alergenFilter}
-            recipes={recipeList}
-            showRecipes={showRecipes}
-          />
+          <RecipesScreen recipes={recipeList} showRecipes={showRecipes} />
         )}
         <StatusBar style="auto" />
         {viewSavedRecipes === true && viewSavedRecipes === true && (
