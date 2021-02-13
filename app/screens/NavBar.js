@@ -5,14 +5,6 @@ function NavBar(props) {
   return (
     <View style={styles.bar}>
       <TouchableOpacity
-        title="filter"
-        onPress={() => {
-          props.showFilterList();
-        }}
-      >
-        <Image style={styles.image} source={require("../assets/filter.png")} />
-      </TouchableOpacity>
-      <TouchableOpacity
         title="Return Home"
         onPress={() => {
           props.showRecipes();
@@ -20,6 +12,19 @@ function NavBar(props) {
       >
         <Image style={styles.image} source={require("../assets/house.png")} />
       </TouchableOpacity>
+      {props.removeFilterIcon == false && (
+        <TouchableOpacity
+          title="filter"
+          onPress={() => {
+            props.showFilterList();
+          }}
+        >
+          <Image
+            style={styles.image}
+            source={require("../assets/filter.png")}
+          />
+        </TouchableOpacity>
+      )}
     </View>
   );
 }
@@ -37,6 +42,8 @@ const styles = StyleSheet.create({
   image: {
     height: 30,
     width: 30,
+    top: 20,
+    tintColor: "#b7a57a",
   },
 });
 export default NavBar;

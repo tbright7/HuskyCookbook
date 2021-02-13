@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   TouchableOpacity,
   Button,
@@ -8,6 +8,7 @@ import {
   View,
   StyleSheet,
   Image,
+  Switch,
 } from "react-native";
 
 function RecipeListScreen(props) {
@@ -17,6 +18,7 @@ function RecipeListScreen(props) {
         flex: 1,
         flexDirection: "rows",
         flexWrap: "wrap",
+        // backgroundColor: "#4b2e83",
       }}
     >
       <View style={styles.bigList}>
@@ -29,7 +31,21 @@ function RecipeListScreen(props) {
                 props.showRecipe(recipe);
               }}
             >
-              <Text style={styles.text}> {recipe.name} </Text>
+              <Image
+                style={{
+                  height: 150,
+                  width: "100%",
+                  justifyContent: "center",
+                  borderTopRightRadius: 20,
+                  borderTopLeftRadius: 20,
+                  alignSelf: "center",
+                }}
+                source={require(`../assets/107.jpg`)}
+                // source={{
+                //   uri: `https://huskycookbook.s3-us-west-2.amazonaws.com/${recipe.id}.jpg`,
+                // }}
+              />
+              <Text style={styles.text}> {recipe.name}</Text>
             </TouchableOpacity>
           </View>
         ))}
@@ -49,23 +65,37 @@ const styles = StyleSheet.create({
     // backgroundColor: "#fff",
     // alignItems: "center",
     justifyContent: "center",
-    // alignContent: "center",
+    alignContent: "center",
+    alignItems: "center",
     // backgroundColor: "white",
+    // backgroundColor: "#4b2e83",
   },
   touchables: {
     // width: 100,
-    height: 75,
-    width: 175,
-    margin: 4,
-    padding: 2,
+    height: 200,
+    width: "100%",
+    margin: 1,
+    // padding: 2,
     justifyContent: "center",
-    alignItems: "center",
-    alignContent: "center",
-    borderWidth: 1,
+    // alignItems: "center",
+    // alignContent: "center",
+    // alignSelf: "center",
+    // borderWidth: 1,
     borderRadius: 20,
     borderWidth: 3,
-    borderColor: "#b7a57a",
-    backgroundColor: "#4b2e83",
+    // borderColor: "#b7a57a",
+    backgroundColor: "#d8c7ff",
+    // backgroundColor: "white",
+
+    shadowColor: "#000000",
+    shadowOpacity: 0.8,
+    shadowRadius: 2,
+    shadowOffset: {
+      height: 3,
+      width: 3,
+    },
+    borderColor: "#4b2e83",
+
     // flex: 1,
     // flexDirection: "row",
     // flexWrap: "wrap",
@@ -74,9 +104,23 @@ const styles = StyleSheet.create({
     // flex: 1,
     // flexDirection: "row",
     // flexWrap: "wrap",
+    // justifyContent: "center",
+    // alignContent: "center",
+    // alignItems: "center",
+    padding: 4,
   },
   text: {
-    color: "white",
+    // color: "white",
+    width: 150,
+    flex: 1,
+    flexDirection: "row",
+    flexWrap: "wrap",
+    justifyContent: "center",
+    alignContent: "center",
+    alignItems: "center",
+    alignSelf: "center",
+    // paddingLeft: 0,
+    // paddingRight: 0,
   },
 });
 export default RecipeListScreen;

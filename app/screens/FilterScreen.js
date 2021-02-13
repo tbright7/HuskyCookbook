@@ -5,6 +5,7 @@ import {
   View,
   StyleSheet,
   TouchableHighlight,
+  Switch,
 } from "react-native";
 function FilterScreen(props) {
   const allergies = [
@@ -17,33 +18,53 @@ function FilterScreen(props) {
     "soy",
     "Vegan",
     "Vegetarian",
+    "Reset Filters",
   ];
-
   return (
     <View style={styles.container}>
       <View style={styles.smallContainer}>
         {allergies.map((allergy) => {
           return (
             <View
-              style={
-                props.activeAllergies.includes(allergy)
-                  ? styles.clickedButtonGroup
-                  : styles.buttonGroup
-              }
+              style={{
+                width: "30%",
+                height: 50,
+                margin: 1,
+                padding: 2,
+                justifyContent: "center",
+                alignItems: "center",
+                borderWidth: 1,
+                borderRadius: 20,
+                borderWidth: 3,
+                borderColor: props.activeAllergies.includes(allergy)
+                  ? "#4b2e83"
+                  : "#b7a57a",
+                backgroundColor: props.activeAllergies.includes(allergy)
+                  ? "#b7a57a"
+                  : "#4b2e83",
+              }}
               key={allergy}
             >
               <TouchableOpacity
                 key={props.activeAllergies}
                 onPress={() => {
-                  props.alergenFilter(allergy);
+                  props.buildActiveAllergies(allergy);
                 }}
               >
                 <Text style={styles.text}>
-                  {allergy == "Vegan" || allergy == "Vegetarian"
+                  {allergy == "Vegan" ||
+                  allergy == "Vegetarian" ||
+                  allergy == "Reset Filters"
                     ? allergy
                     : `No ${allergy}`}
                 </Text>
               </TouchableOpacity>
+              {/* <Switch
+                onValueChange={props.setRecipeList(
+                  props.recipeList.filter((recipe) => recipe[allergy] === false)
+                )}
+                value={props.recipeList}
+              /> */}
             </View>
           );
         })}
@@ -59,47 +80,21 @@ const styles = StyleSheet.create({
     // height: 350,
     flexDirection: "row",
     flexWrap: "wrap",
-    backgroundColor: "#fff",
+    // backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
     alignContent: "center",
-    backgroundColor: "white",
+    alignSelf: "center",
   },
   smallContainer: {
     width: 370,
     height: 10,
     flexDirection: "row",
     flexWrap: "wrap",
-    backgroundColor: "#fff",
+    // backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
     alignContent: "center",
-  },
-  buttonGroup: {
-    width: "30%",
-    height: 50,
-    margin: 4,
-    padding: 2,
-    justifyContent: "center",
-    alignItems: "center",
-    borderWidth: 1,
-    borderRadius: 20,
-    borderWidth: 3,
-    borderColor: "#b7a57a",
-    backgroundColor: "#4b2e83",
-  },
-  clickedButtonGroup: {
-    width: "30%",
-    height: 50,
-    margin: 4,
-    padding: 2,
-    justifyContent: "center",
-    alignItems: "center",
-    borderWidth: 1,
-    borderRadius: 20,
-    borderWidth: 3,
-    borderColor: "#4b2e83",
-    backgroundColor: "#b7a57a",
   },
   text: {
     color: "white",
