@@ -18,7 +18,7 @@ function FilterScreen(props) {
     "soy",
     "Vegan",
     "Vegetarian",
-    "Reset Filters",
+    // "Reset Filters",
   ];
   return (
     <View style={styles.container}>

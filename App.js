@@ -62,7 +62,7 @@ export default function App() {
                   }}
                 >
                   <Image
-                    style={styles.cake}
+                    style={styles.icon}
                     source={require("./app/assets/salad.png")}
                   />
                   {/* <Text
@@ -105,7 +105,7 @@ export default function App() {
                   }}
                 >
                   <Image
-                    style={styles.cake}
+                    style={styles.icon}
                     source={require("./app/assets/meal.png")}
                   />
                 </TouchableOpacity>
@@ -120,7 +120,7 @@ export default function App() {
                   }}
                 >
                   <Image
-                    style={styles.cake}
+                    style={styles.icon}
                     source={require("./app/assets/Menu.png")}
                   />
                 </TouchableOpacity>
@@ -136,7 +136,7 @@ export default function App() {
                   }}
                 >
                   <Image
-                    style={styles.cake}
+                    style={styles.icon}
                     source={require("./app/assets/soup.png")}
                   />
                   {/* <Text
@@ -178,7 +178,7 @@ export default function App() {
                   }}
                 >
                   <Image
-                    style={styles.cake}
+                    style={styles.icon}
                     source={require("./app/assets/cake.png")}
                   />
                 </TouchableOpacity>
@@ -192,7 +192,7 @@ export default function App() {
                   }}
                 >
                   <Image
-                    style={styles.cake}
+                    style={styles.icon}
                     source={require("./app/assets/heart.png")}
                   />
                 </TouchableOpacity>
@@ -252,7 +252,7 @@ const styles = StyleSheet.create({
     // tintColor: "#4b2e83",
     // tintColor: "white",
   },
-  cake: {
+  icon: {
     // flex: 1,
     // resizeMode: "cover",
     // justifyContent: "center",
@@ -261,7 +261,7 @@ const styles = StyleSheet.create({
     // left: "24%",
     width: 125,
     height: 125,
-    top: -10,
+    top: -7,
     // tintColor: "#4b2e83",
   },
   description: {
